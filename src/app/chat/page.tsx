@@ -33,7 +33,7 @@ const Chat: React.FC = () => {
         const data = JSON.parse(responseText);
         // Update here: use "answer" from API response instead of "response"
         setResponse(data.answer || "Received empty response from API.");
-      } catch (jsonError) {
+      } catch {
         throw new Error(`Invalid JSON response: ${responseText}`);
       }
 

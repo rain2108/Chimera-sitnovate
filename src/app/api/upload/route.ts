@@ -37,7 +37,7 @@
 
 import { NextRequest, NextResponse } from "next/server";
 import { S3Client, PutObjectCommand } from "@aws-sdk/client-s3";
-import { saveImageToDatabase, getImages } from "@/lib/images";
+import { saveImageToDatabase } from "@/lib/images";
 import { v4 as uuidv4 } from "uuid";
 
 const s3 = new S3Client({
