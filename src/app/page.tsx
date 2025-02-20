@@ -1,6 +1,7 @@
 import OrangeRedIsometricMaze from "@/components/ui/maze/OrangeRedIsometricMaze"
 import Image from "next/image"
 import Link from "next/link"
+import { Button } from "@/components/ui/button"
 
 export default function Home() {
   return (
@@ -28,8 +29,8 @@ export default function Home() {
         </ul>
       </nav>
 
-      {/* Centered Chimera Logo */}
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      {/* Centered Chimera Logo and Try Now Button */}
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
         <Image
           src="/images/chimera-removebg-preview.png"
           alt="Chimera Logo"
@@ -37,7 +38,11 @@ export default function Home() {
           height={400}
           className="opacity-80"
         />
+        <Link href="/upload">
+          <Button className="mt-8 bg-orange-500 hover:bg-orange-600 text-white">Try Now</Button>
+        </Link>
       </div>
     </main>
   )
 }
+
